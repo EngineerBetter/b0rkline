@@ -9,7 +9,7 @@ git clone https://github.com/EngineerBetter/b0rkline.git
 cd b0rkline
 vagrant init EngineerBetter/concourse-training-box --box-version 0.0.18
 vagrant up
-fly -t vm login -c http://localhost:8080
+fly -t vm login -c http://localhost:8080 -u concourse -p course
 fly -t vm set-pipeline -p b0rk -c pipeline.yml
 fly -t vm unpause-pipeline -p b0rk
 fly -t vm trigger-job -j b0rk/b0rk
