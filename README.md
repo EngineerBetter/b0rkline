@@ -5,6 +5,8 @@ b0rk a Concourse - https://github.com/concourse/concourse/issues/1739#issuecomme
 ## Repro steps
 
 ```
+git clone https://github.com/EngineerBetter/b0rkline.git
+cd b0rkline
 vagrant init EngineerBetter/concourse-training-box --box-version 0.0.18
 vagrant up
 fly -t vm login -c http://localhost:8080
