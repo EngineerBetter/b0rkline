@@ -1,0 +1,14 @@
+---
+resources:
+- name: b0rkline
+  type: git
+  source:
+    uri: https://github.com/EngineerBetter/b0rkline.git
+
+jobs:
+- name: b0rk
+  plan:
+  - get: b0rkline
+  - task: b0rk
+    image: container-image
+    config:
